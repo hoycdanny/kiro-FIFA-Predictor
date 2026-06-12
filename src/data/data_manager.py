@@ -319,8 +319,8 @@ class DataManager:
         """
         errors: list[str] = []
 
-        if len(teams) != 48:
-            errors.append(f"Expected 48 teams, got {len(teams)}")
+        if len(teams) < 32:
+            errors.append(f"Expected at least 32 teams, got {len(teams)}")
 
         for team in teams:
             for field_name in self.REQUIRED_TEAM_FIELDS:

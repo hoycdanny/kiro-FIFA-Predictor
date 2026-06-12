@@ -300,8 +300,14 @@ async def team_info(team_name: str) -> str:
 # MAIN ENTRY POINT
 # ============================================================================
 
-if __name__ == "__main__":
+
+def main():
+    """Main entry point for the FIFA Predictor MCP server."""
     import asyncio
 
     asyncio.run(startup())
     mcp.run(transport="stdio")
+
+
+if __name__ == "__main__":
+    main()

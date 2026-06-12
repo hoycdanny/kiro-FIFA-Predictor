@@ -9,6 +9,9 @@ dependencies = [
     "rich",
 ]
 
+[project.scripts]
+kiro-fifa-predictor = "src.server:main"
+
 [project.optional-dependencies]
 dev = [
     "pytest",
@@ -26,4 +29,4 @@ testpaths = ["tests"]
 asyncio_mode = "auto"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src"]
+packages = ["src", "data"]
