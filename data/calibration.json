@@ -1,0 +1,10 @@
+{
+  "current_weights": {
+    "poisson": 0.40,
+    "elo": 0.25,
+    "h2h": 0.15,
+    "dynamic": 0.20
+  },
+  "weight_history": [],
+  "accuracy_records": []
+}

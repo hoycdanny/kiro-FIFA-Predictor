@@ -1,0 +1,724 @@
+{
+  "matches": [
+    {
+      "match_id": "GS-A-1",
+      "date": "2026-06-11",
+      "team_a": "Morocco",
+      "team_b": "Jamaica",
+      "stage": "group",
+      "group": "A",
+      "venue_city": "Philadelphia",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-A-2",
+      "date": "2026-06-11",
+      "team_a": "Canada",
+      "team_b": "Ecuador",
+      "stage": "group",
+      "group": "A",
+      "venue_city": "Toronto",
+      "venue_country": "Canada"
+    },
+    {
+      "match_id": "GS-A-3",
+      "date": "2026-06-15",
+      "team_a": "Morocco",
+      "team_b": "Ecuador",
+      "stage": "group",
+      "group": "A",
+      "venue_city": "Miami",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-A-4",
+      "date": "2026-06-15",
+      "team_a": "Canada",
+      "team_b": "Jamaica",
+      "stage": "group",
+      "group": "A",
+      "venue_city": "Vancouver",
+      "venue_country": "Canada"
+    },
+    {
+      "match_id": "GS-A-5",
+      "date": "2026-06-19",
+      "team_a": "Morocco",
+      "team_b": "Canada",
+      "stage": "group",
+      "group": "A",
+      "venue_city": "New York",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-A-6",
+      "date": "2026-06-19",
+      "team_a": "Ecuador",
+      "team_b": "Jamaica",
+      "stage": "group",
+      "group": "A",
+      "venue_city": "Houston",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-B-1",
+      "date": "2026-06-12",
+      "team_a": "Spain",
+      "team_b": "Paraguay",
+      "stage": "group",
+      "group": "B",
+      "venue_city": "Mexico City",
+      "venue_country": "Mexico"
+    },
+    {
+      "match_id": "GS-B-2",
+      "date": "2026-06-12",
+      "team_a": "Portugal",
+      "team_b": "Uruguay",
+      "stage": "group",
+      "group": "B",
+      "venue_city": "Los Angeles",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-B-3",
+      "date": "2026-06-16",
+      "team_a": "Spain",
+      "team_b": "Uruguay",
+      "stage": "group",
+      "group": "B",
+      "venue_city": "Dallas",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-B-4",
+      "date": "2026-06-16",
+      "team_a": "Portugal",
+      "team_b": "Paraguay",
+      "stage": "group",
+      "group": "B",
+      "venue_city": "Atlanta",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-B-5",
+      "date": "2026-06-20",
+      "team_a": "Spain",
+      "team_b": "Portugal",
+      "stage": "group",
+      "group": "B",
+      "venue_city": "Monterrey",
+      "venue_country": "Mexico"
+    },
+    {
+      "match_id": "GS-B-6",
+      "date": "2026-06-20",
+      "team_a": "Uruguay",
+      "team_b": "Paraguay",
+      "stage": "group",
+      "group": "B",
+      "venue_city": "Kansas City",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-C-1",
+      "date": "2026-06-12",
+      "team_a": "Argentina",
+      "team_b": "New Zealand",
+      "stage": "group",
+      "group": "C",
+      "venue_city": "Miami",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-C-2",
+      "date": "2026-06-12",
+      "team_a": "Mexico",
+      "team_b": "Uzbekistan",
+      "stage": "group",
+      "group": "C",
+      "venue_city": "Guadalajara",
+      "venue_country": "Mexico"
+    },
+    {
+      "match_id": "GS-C-3",
+      "date": "2026-06-16",
+      "team_a": "Argentina",
+      "team_b": "Uzbekistan",
+      "stage": "group",
+      "group": "C",
+      "venue_city": "Houston",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-C-4",
+      "date": "2026-06-16",
+      "team_a": "Mexico",
+      "team_b": "New Zealand",
+      "stage": "group",
+      "group": "C",
+      "venue_city": "Mexico City",
+      "venue_country": "Mexico"
+    },
+    {
+      "match_id": "GS-C-5",
+      "date": "2026-06-20",
+      "team_a": "Argentina",
+      "team_b": "Mexico",
+      "stage": "group",
+      "group": "C",
+      "venue_city": "Dallas",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-C-6",
+      "date": "2026-06-20",
+      "team_a": "Uzbekistan",
+      "team_b": "New Zealand",
+      "stage": "group",
+      "group": "C",
+      "venue_city": "San Francisco",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-D-1",
+      "date": "2026-06-13",
+      "team_a": "France",
+      "team_b": "South Africa",
+      "stage": "group",
+      "group": "D",
+      "venue_city": "New York",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-D-2",
+      "date": "2026-06-13",
+      "team_a": "Colombia",
+      "team_b": "Indonesia",
+      "stage": "group",
+      "group": "D",
+      "venue_city": "Atlanta",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-D-3",
+      "date": "2026-06-17",
+      "team_a": "France",
+      "team_b": "Indonesia",
+      "stage": "group",
+      "group": "D",
+      "venue_city": "Philadelphia",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-D-4",
+      "date": "2026-06-17",
+      "team_a": "Colombia",
+      "team_b": "South Africa",
+      "stage": "group",
+      "group": "D",
+      "venue_city": "Miami",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-D-5",
+      "date": "2026-06-21",
+      "team_a": "France",
+      "team_b": "Colombia",
+      "stage": "group",
+      "group": "D",
+      "venue_city": "Los Angeles",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-D-6",
+      "date": "2026-06-21",
+      "team_a": "Indonesia",
+      "team_b": "South Africa",
+      "stage": "group",
+      "group": "D",
+      "venue_city": "Seattle",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-E-1",
+      "date": "2026-06-13",
+      "team_a": "Brazil",
+      "team_b": "Honduras",
+      "stage": "group",
+      "group": "E",
+      "venue_city": "Los Angeles",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-E-2",
+      "date": "2026-06-13",
+      "team_a": "Germany",
+      "team_b": "Nigeria",
+      "stage": "group",
+      "group": "E",
+      "venue_city": "Dallas",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-E-3",
+      "date": "2026-06-17",
+      "team_a": "Brazil",
+      "team_b": "Nigeria",
+      "stage": "group",
+      "group": "E",
+      "venue_city": "Houston",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-E-4",
+      "date": "2026-06-17",
+      "team_a": "Germany",
+      "team_b": "Honduras",
+      "stage": "group",
+      "group": "E",
+      "venue_city": "Kansas City",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-E-5",
+      "date": "2026-06-21",
+      "team_a": "Brazil",
+      "team_b": "Germany",
+      "stage": "group",
+      "group": "E",
+      "venue_city": "New York",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-E-6",
+      "date": "2026-06-21",
+      "team_a": "Nigeria",
+      "team_b": "Honduras",
+      "stage": "group",
+      "group": "E",
+      "venue_city": "Atlanta",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-F-1",
+      "date": "2026-06-14",
+      "team_a": "England",
+      "team_b": "Costa Rica",
+      "stage": "group",
+      "group": "F",
+      "venue_city": "Philadelphia",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-F-2",
+      "date": "2026-06-14",
+      "team_a": "Senegal",
+      "team_b": "Iraq",
+      "stage": "group",
+      "group": "F",
+      "venue_city": "Miami",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-F-3",
+      "date": "2026-06-18",
+      "team_a": "England",
+      "team_b": "Iraq",
+      "stage": "group",
+      "group": "F",
+      "venue_city": "Toronto",
+      "venue_country": "Canada"
+    },
+    {
+      "match_id": "GS-F-4",
+      "date": "2026-06-18",
+      "team_a": "Senegal",
+      "team_b": "Costa Rica",
+      "stage": "group",
+      "group": "F",
+      "venue_city": "Dallas",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-F-5",
+      "date": "2026-06-22",
+      "team_a": "England",
+      "team_b": "Senegal",
+      "stage": "group",
+      "group": "F",
+      "venue_city": "New York",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-F-6",
+      "date": "2026-06-22",
+      "team_a": "Iraq",
+      "team_b": "Costa Rica",
+      "stage": "group",
+      "group": "F",
+      "venue_city": "Houston",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-G-1",
+      "date": "2026-06-14",
+      "team_a": "Netherlands",
+      "team_b": "Scotland",
+      "stage": "group",
+      "group": "G",
+      "venue_city": "San Francisco",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-G-2",
+      "date": "2026-06-14",
+      "team_a": "Japan",
+      "team_b": "Iran",
+      "stage": "group",
+      "group": "G",
+      "venue_city": "Seattle",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-G-3",
+      "date": "2026-06-18",
+      "team_a": "Netherlands",
+      "team_b": "Iran",
+      "stage": "group",
+      "group": "G",
+      "venue_city": "Atlanta",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-G-4",
+      "date": "2026-06-18",
+      "team_a": "Japan",
+      "team_b": "Scotland",
+      "stage": "group",
+      "group": "G",
+      "venue_city": "Los Angeles",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-G-5",
+      "date": "2026-06-22",
+      "team_a": "Netherlands",
+      "team_b": "Japan",
+      "stage": "group",
+      "group": "G",
+      "venue_city": "Dallas",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-G-6",
+      "date": "2026-06-22",
+      "team_a": "Iran",
+      "team_b": "Scotland",
+      "stage": "group",
+      "group": "G",
+      "venue_city": "Kansas City",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-H-1",
+      "date": "2026-06-11",
+      "team_a": "Belgium",
+      "team_b": "Slovenia",
+      "stage": "group",
+      "group": "H",
+      "venue_city": "Toronto",
+      "venue_country": "Canada"
+    },
+    {
+      "match_id": "GS-H-2",
+      "date": "2026-06-11",
+      "team_a": "South Korea",
+      "team_b": "Algeria",
+      "stage": "group",
+      "group": "H",
+      "venue_city": "Seattle",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-H-3",
+      "date": "2026-06-15",
+      "team_a": "Belgium",
+      "team_b": "Algeria",
+      "stage": "group",
+      "group": "H",
+      "venue_city": "New York",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-H-4",
+      "date": "2026-06-15",
+      "team_a": "South Korea",
+      "team_b": "Slovenia",
+      "stage": "group",
+      "group": "H",
+      "venue_city": "San Francisco",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-H-5",
+      "date": "2026-06-19",
+      "team_a": "Belgium",
+      "team_b": "South Korea",
+      "stage": "group",
+      "group": "H",
+      "venue_city": "Philadelphia",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-H-6",
+      "date": "2026-06-19",
+      "team_a": "Algeria",
+      "team_b": "Slovenia",
+      "stage": "group",
+      "group": "H",
+      "venue_city": "Dallas",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-I-1",
+      "date": "2026-06-12",
+      "team_a": "Croatia",
+      "team_b": "Mali",
+      "stage": "group",
+      "group": "I",
+      "venue_city": "Kansas City",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-I-2",
+      "date": "2026-06-12",
+      "team_a": "Egypt",
+      "team_b": "Saudi Arabia",
+      "stage": "group",
+      "group": "I",
+      "venue_city": "Houston",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-I-3",
+      "date": "2026-06-16",
+      "team_a": "Croatia",
+      "team_b": "Saudi Arabia",
+      "stage": "group",
+      "group": "I",
+      "venue_city": "Seattle",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-I-4",
+      "date": "2026-06-16",
+      "team_a": "Egypt",
+      "team_b": "Mali",
+      "stage": "group",
+      "group": "I",
+      "venue_city": "Philadelphia",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-I-5",
+      "date": "2026-06-20",
+      "team_a": "Croatia",
+      "team_b": "Egypt",
+      "stage": "group",
+      "group": "I",
+      "venue_city": "Miami",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-I-6",
+      "date": "2026-06-20",
+      "team_a": "Saudi Arabia",
+      "team_b": "Mali",
+      "stage": "group",
+      "group": "I",
+      "venue_city": "Los Angeles",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-J-1",
+      "date": "2026-06-13",
+      "team_a": "Italy",
+      "team_b": "Denmark",
+      "stage": "group",
+      "group": "J",
+      "venue_city": "San Francisco",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-J-2",
+      "date": "2026-06-13",
+      "team_a": "Australia",
+      "team_b": "Tunisia",
+      "stage": "group",
+      "group": "J",
+      "venue_city": "Vancouver",
+      "venue_country": "Canada"
+    },
+    {
+      "match_id": "GS-J-3",
+      "date": "2026-06-17",
+      "team_a": "Italy",
+      "team_b": "Tunisia",
+      "stage": "group",
+      "group": "J",
+      "venue_city": "New York",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-J-4",
+      "date": "2026-06-17",
+      "team_a": "Australia",
+      "team_b": "Denmark",
+      "stage": "group",
+      "group": "J",
+      "venue_city": "Toronto",
+      "venue_country": "Canada"
+    },
+    {
+      "match_id": "GS-J-5",
+      "date": "2026-06-21",
+      "team_a": "Italy",
+      "team_b": "Australia",
+      "stage": "group",
+      "group": "J",
+      "venue_city": "Philadelphia",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-J-6",
+      "date": "2026-06-21",
+      "team_a": "Tunisia",
+      "team_b": "Denmark",
+      "stage": "group",
+      "group": "J",
+      "venue_city": "Atlanta",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-K-1",
+      "date": "2026-06-14",
+      "team_a": "Switzerland",
+      "team_b": "Poland",
+      "stage": "group",
+      "group": "K",
+      "venue_city": "Miami",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-K-2",
+      "date": "2026-06-14",
+      "team_a": "Serbia",
+      "team_b": "Qatar",
+      "stage": "group",
+      "group": "K",
+      "venue_city": "Houston",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-K-3",
+      "date": "2026-06-18",
+      "team_a": "Switzerland",
+      "team_b": "Qatar",
+      "stage": "group",
+      "group": "K",
+      "venue_city": "Kansas City",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-K-4",
+      "date": "2026-06-18",
+      "team_a": "Serbia",
+      "team_b": "Poland",
+      "stage": "group",
+      "group": "K",
+      "venue_city": "Vancouver",
+      "venue_country": "Canada"
+    },
+    {
+      "match_id": "GS-K-5",
+      "date": "2026-06-22",
+      "team_a": "Switzerland",
+      "team_b": "Serbia",
+      "stage": "group",
+      "group": "K",
+      "venue_city": "San Francisco",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-K-6",
+      "date": "2026-06-22",
+      "team_a": "Qatar",
+      "team_b": "Poland",
+      "stage": "group",
+      "group": "K",
+      "venue_city": "Seattle",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-L-1",
+      "date": "2026-06-11",
+      "team_a": "Austria",
+      "team_b": "Paraguay",
+      "stage": "group",
+      "group": "L",
+      "venue_city": "Los Angeles",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-L-2",
+      "date": "2026-06-11",
+      "team_a": "United States",
+      "team_b": "Cameroon",
+      "stage": "group",
+      "group": "L",
+      "venue_city": "Atlanta",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-L-3",
+      "date": "2026-06-15",
+      "team_a": "Austria",
+      "team_b": "Cameroon",
+      "stage": "group",
+      "group": "L",
+      "venue_city": "Dallas",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-L-4",
+      "date": "2026-06-15",
+      "team_a": "United States",
+      "team_b": "Paraguay",
+      "stage": "group",
+      "group": "L",
+      "venue_city": "Kansas City",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-L-5",
+      "date": "2026-06-19",
+      "team_a": "Austria",
+      "team_b": "United States",
+      "stage": "group",
+      "group": "L",
+      "venue_city": "New York",
+      "venue_country": "United States"
+    },
+    {
+      "match_id": "GS-L-6",
+      "date": "2026-06-19",
+      "team_a": "Cameroon",
+      "team_b": "Paraguay",
+      "stage": "group",
+      "group": "L",
+      "venue_city": "Houston",
+      "venue_country": "United States"
+    }
+  ]
+}

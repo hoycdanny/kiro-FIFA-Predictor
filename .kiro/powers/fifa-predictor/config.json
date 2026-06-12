@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "fifa-predictor": {
+      "command": "python",
+      "args": ["src/server.py"],
+      "cwd": "${workspaceFolder}",
+      "env": {}
+    }
+  }
+}
