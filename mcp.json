@@ -3,6 +3,8 @@
     "fifa-predictor": {
       "command": "uv",
       "args": [
+        "--directory",
+        "${powerRepoDir}",
         "run",
         "--with", "mcp[cli]",
         "--with", "numpy",
