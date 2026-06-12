@@ -143,6 +143,204 @@
       "confidence_index": 8,
       "coach_style": "分析師",
       "model_weights": {}
+    },
+    {
+      "timestamp": "2026-06-12T13:29:28Z",
+      "match_id": "Brazil_vs_Argentina",
+      "team_a": "Brazil",
+      "team_b": "Argentina",
+      "predicted_score": [
+        0,
+        0
+      ],
+      "win_draw_lose": [
+        0.24358523931497184,
+        0.4147343461644359,
+        0.3416804145205923
+      ],
+      "confidence_index": 12,
+      "coach_style": "分析師",
+      "model_weights": {}
+    },
+    {
+      "timestamp": "2026-06-12T13:33:38Z",
+      "match_id": "Brazil_vs_Argentina",
+      "team_a": "Brazil",
+      "team_b": "Argentina",
+      "predicted_score": [
+        0,
+        0
+      ],
+      "win_draw_lose": [
+        0.24358523931497184,
+        0.4147343461644359,
+        0.3416804145205923
+      ],
+      "confidence_index": 12,
+      "coach_style": "分析師",
+      "model_weights": {}
+    },
+    {
+      "timestamp": "2026-06-12T13:48:09Z",
+      "match_id": "Brazil_vs_Argentina",
+      "team_a": "Brazil",
+      "team_b": "Argentina",
+      "predicted_score": [
+        0,
+        0
+      ],
+      "win_draw_lose": [
+        0.24358523931497184,
+        0.4147343461644359,
+        0.3416804145205923
+      ],
+      "confidence_index": 12,
+      "coach_style": "分析師",
+      "model_weights": {}
+    },
+    {
+      "timestamp": "2026-06-12T13:48:09Z",
+      "match_id": "Germany_vs_France",
+      "team_a": "Germany",
+      "team_b": "France",
+      "predicted_score": [
+        0,
+        0
+      ],
+      "win_draw_lose": [
+        0.2812556625607276,
+        0.35899559985255475,
+        0.35974873758671766
+      ],
+      "confidence_index": 4,
+      "coach_style": "戰術家",
+      "model_weights": {}
+    },
+    {
+      "timestamp": "2026-06-12T13:48:09Z",
+      "match_id": "Brazil_vs_Argentina",
+      "team_a": "Brazil",
+      "team_b": "Argentina",
+      "predicted_score": [
+        0,
+        0
+      ],
+      "win_draw_lose": [
+        0.24358523931497184,
+        0.4147343461644359,
+        0.3416804145205923
+      ],
+      "confidence_index": 12,
+      "coach_style": "分析師",
+      "model_weights": {}
+    },
+    {
+      "timestamp": "2026-06-12T13:48:09Z",
+      "match_id": "Spain_vs_Portugal",
+      "team_a": "Spain",
+      "team_b": "Portugal",
+      "predicted_score": [
+        0,
+        0
+      ],
+      "win_draw_lose": [
+        0.37441307393391776,
+        0.38886462952272893,
+        0.2367222965433534
+      ],
+      "confidence_index": 8,
+      "coach_style": "分析師",
+      "model_weights": {}
+    },
+    {
+      "timestamp": "2026-06-12T13:48:31Z",
+      "match_id": "Brazil_vs_Argentina",
+      "team_a": "Brazil",
+      "team_b": "Argentina",
+      "predicted_score": [
+        0,
+        0
+      ],
+      "win_draw_lose": [
+        0.24358523931497184,
+        0.4147343461644359,
+        0.3416804145205923
+      ],
+      "confidence_index": 12,
+      "coach_style": "分析師",
+      "model_weights": {}
+    },
+    {
+      "timestamp": "2026-06-12T13:48:31Z",
+      "match_id": "Germany_vs_France",
+      "team_a": "Germany",
+      "team_b": "France",
+      "predicted_score": [
+        0,
+        0
+      ],
+      "win_draw_lose": [
+        0.2812556625607276,
+        0.35899559985255475,
+        0.35974873758671766
+      ],
+      "confidence_index": 4,
+      "coach_style": "戰術家",
+      "model_weights": {}
+    },
+    {
+      "timestamp": "2026-06-12T13:48:31Z",
+      "match_id": "Brazil_vs_Argentina",
+      "team_a": "Brazil",
+      "team_b": "Argentina",
+      "predicted_score": [
+        0,
+        0
+      ],
+      "win_draw_lose": [
+        0.24358523931497184,
+        0.4147343461644359,
+        0.3416804145205923
+      ],
+      "confidence_index": 12,
+      "coach_style": "分析師",
+      "model_weights": {}
+    },
+    {
+      "timestamp": "2026-06-12T13:48:31Z",
+      "match_id": "Spain_vs_Portugal",
+      "team_a": "Spain",
+      "team_b": "Portugal",
+      "predicted_score": [
+        0,
+        0
+      ],
+      "win_draw_lose": [
+        0.37441307393391776,
+        0.38886462952272893,
+        0.2367222965433534
+      ],
+      "confidence_index": 8,
+      "coach_style": "分析師",
+      "model_weights": {}
+    },
+    {
+      "timestamp": "2026-06-12T13:49:01Z",
+      "match_id": "Canada_vs_Bosnia and Herzegovina",
+      "team_a": "Canada",
+      "team_b": "Bosnia and Herzegovina",
+      "predicted_score": [
+        0,
+        0
+      ],
+      "win_draw_lose": [
+        0.3658126543841906,
+        0.3769194048359353,
+        0.2572679407798742
+      ],
+      "confidence_index": 7,
+      "coach_style": "分析師",
+      "model_weights": {}
     }
   ]
 }

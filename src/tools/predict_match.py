@@ -70,6 +70,9 @@ async def handle_predict_match(
     if isinstance(result_b, PredictionError):
         return _format_error(result_b)
 
+    # Check if any team is a non-participant (friendly match)
+    is_friendly = validator.is_non_participant(result_a) or validator.is_non_participant(result_b)
+
     # Step 3: Validate coach style if provided
     resolved_style: Optional[str] = None
     if coach_style is not None:
@@ -94,6 +97,21 @@ async def handle_predict_match(
 
     # Step 5: Format the primary prediction output
     formatted_output = formatter.format_match_prediction(primary_prediction)
+
+    # Add friendly match disclaimer if applicable
+    if is_friendly:
+        non_participant_names = []
+        if validator.is_non_participant(result_a):
+            non_participant_names.append(result_a)
+        if validator.is_non_participant(result_b):
+            non_participant_names.append(result_b)
+        disclaimer = (
+            "\n\n> ⚠️ **友誼賽/熱身賽預測提示：** "
+            f"{'、'.join(non_participant_names)} 非 2026 世界盃參賽隊伍，"
+            "本預測使用該隊伍的估算數據（基於 FIFA 排名與近期表現），"
+            "準確度可能較正式參賽隊伍的預測為低。"
+        )
+        formatted_output = formatted_output + disclaimer
 
     # Step 6: Generate all three coach style perspectives (Requirement 8.4)
     coach_styles_section = _generate_all_coach_styles(

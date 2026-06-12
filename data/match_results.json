@@ -1,3 +1,15 @@
 {
-  "matches": []
+  "matches": [
+    {
+      "match_id": "MANUAL-20260612133207",
+      "date": "2026-06-12",
+      "team_a": "Canada",
+      "team_b": "Bosnia and Herzegovina",
+      "score_a": 2,
+      "score_b": 0,
+      "stage": "group",
+      "group": null,
+      "venue_country": ""
+    }
+  ]
 }

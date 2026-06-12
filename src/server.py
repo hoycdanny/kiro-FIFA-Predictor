@@ -110,7 +110,14 @@ async def startup() -> None:
 
     # Step 8: Initialize InputValidator with TeamMatcher
     team_names = [t.name for t in teams]
-    team_matcher = TeamMatcher(team_names)
+    # Include non-participant teams for friendly match support
+    try:
+        np_teams = _data_manager.load_non_participant_teams()
+        np_team_names = [t.name for t in np_teams]
+        all_known_names = team_names + np_team_names
+    except (FileNotFoundError, Exception):
+        all_known_names = team_names
+    team_matcher = TeamMatcher(all_known_names)
     _input_validator = InputValidator(team_matcher=team_matcher)
 
 

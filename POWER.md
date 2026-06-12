@@ -1,0 +1,144 @@
+# FIFA Predictor Power
+
+## Overview
+
+The FIFA Predictor Power provides 2026 FIFA World Cup match prediction capabilities via MCP tools integrated into the Kiro chat interface. It uses a multi-model ensemble prediction engine combining Dixon-Coles Poisson, Elo ratings, historical head-to-head records, and dynamic factors to produce accurate match forecasts.
+
+**Keywords:** fifa, world cup, soccer, football, prediction, match, group, champion, 2026, 世界盃, 預測
+
+Key features:
+- Single match predictions with win/draw/lose probabilities and top score lines
+- Group stage simulation with full standings tables
+- Champion prediction via Monte Carlo tournament simulation (10,000+ runs)
+- Post-match recalibration to improve accuracy over time
+- Three coach analysis styles: Analyst, Contrarian, and Tactician
+- Fuzzy team name matching (English, Chinese, abbreviations)
+
+## Available Tools
+
+### 1. `predict_match`
+
+Predict a single match between two teams.
+
+**Parameters:**
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `team_a` | string | Yes | First team name (English or Chinese) |
+| `team_b` | string | Yes | Second team name (English or Chinese) |
+| `coach_style` | string | No | Analysis style: "分析師", "反向思考者", "戰術家", or keywords "conservative", "aggressive", "balanced" |
+
+**Returns:** Win/draw/lose probabilities, top 3 most likely scores, confidence index, over/under 2.5 goals, and expected goals (xG).
+
+**Example:**
+```
+predict_match(team_a="Brazil", team_b="Argentina")
+predict_match(team_a="巴西", team_b="阿根廷", coach_style="戰術家")
+predict_match(team_a="Germany", team_b="France", coach_style="aggressive")
+```
+
+---
+
+### 2. `predict_group`
+
+Predict group stage standings and match results.
+
+**Parameters:**
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `group_id` | string | Yes | Group identifier (A through L) |
+
+**Returns:** Ranked standings table with points, wins, draws, losses, goals for/against, goal difference, and qualification status for all 4 teams. Includes predicted scores for all 6 group matches.
+
+**Example:**
+```
+predict_group(group_id="A")
+predict_group(group_id="F")
+```
+
+---
+
+### 3. `predict_champion`
+
+Predict the World Cup champion using Monte Carlo simulation.
+
+**Parameters:**
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `simulations` | integer | No | Number of simulations (default: 10000) |
+
+**Returns:** Predicted champion, top 5 teams by championship probability, per-team round advancement probabilities, and knockout bracket visualization.
+
+**Example:**
+```
+predict_champion()
+predict_champion(simulations=50000)
+```
+
+---
+
+### 4. `update_results`
+
+Update match results and recalibrate the prediction model.
+
+**Parameters:**
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `match_id` | string | No | Specific match ID to update |
+| `manual_result` | string | No | Manual result input (format: "team_a score_a - score_b team_b") |
+
+**Returns:** Recalibration report showing weight adjustments, accuracy changes, and updated dynamic factors.
+
+**Example:**
+```
+update_results()
+update_results(match_id="GS-A-1")
+update_results(manual_result="Brazil 2 - 1 Argentina")
+```
+
+---
+
+### 5. `accuracy_stats`
+
+Display prediction accuracy statistics.
+
+**Parameters:** None
+
+**Returns:** Exact score hit rate, win/draw/lose direction accuracy, average goal error, per-coach-style breakdown, confidence calibration analysis (3 bands), and cross-confederation accuracy.
+
+**Example:**
+```
+accuracy_stats()
+```
+
+---
+
+### 6. `team_info`
+
+Query detailed team profile information.
+
+**Parameters:**
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `team_name` | string | Yes | Team name (supports fuzzy matching, English/Chinese/abbreviations) |
+
+**Returns:** Comprehensive team profile with FIFA ranking, Elo rating, recent form (last 10 matches), World Cup history, and advanced statistics. If multiple matches are found, presents options for selection.
+
+**Example:**
+```
+team_info(team_name="Brazil")
+team_info(team_name="巴西")
+team_info(team_name="USA")
+```
+
+## Setup & Requirements
+
+- **Runtime:** Python 3.10+
+- **Dependencies:** `mcp[cli]`, `numpy`, `rich` (auto-installed via `uv`)
+- **No manual setup required** — the Power uses `uv` to run the server with dependencies resolved automatically.
+
+## Configuration Notes
+
+- **Transport:** stdio (standard Kiro Power MCP transport)
+- **Data directory:** `data/` relative to project root contains teams.json, groups.json, schedule.json, and dynamic result files
+- **Startup validation:** The server validates data integrity (48 teams, 12 groups × 4 teams, no missing fields) before accepting requests. If validation fails, the server aborts with a descriptive error.
+- **Fallback data:** If the external data source is unavailable, the system uses a static snapshot generated by `scripts/fallback_data.py`

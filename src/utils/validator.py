@@ -9,7 +9,7 @@ from enum import Enum
 from typing import Optional, TYPE_CHECKING
 
 from src.data.data_manager import PredictionError
-from src.utils.constants import ALL_TEAMS, GROUP_ASSIGNMENTS
+from src.utils.constants import ALL_TEAMS, ALL_KNOWN_TEAMS, GROUP_ASSIGNMENTS, NON_PARTICIPANT_ALIASES
 
 if TYPE_CHECKING:
     from src.utils.team_matcher import TeamMatcher
@@ -58,6 +58,7 @@ class InputValidator:
 
     Uses TeamMatcher for team name resolution (dependency injection).
     Falls back to exact matching against ALL_TEAMS if no TeamMatcher is provided.
+    Supports both World Cup participants and non-participant teams (for friendlies).
     """
 
     def __init__(self, team_matcher: Optional["TeamMatcher"] = None):
@@ -76,7 +77,7 @@ class InputValidator:
         if self._team_matcher is None:
             from src.utils.team_matcher import TeamMatcher
 
-            self._team_matcher = TeamMatcher(ALL_TEAMS)
+            self._team_matcher = TeamMatcher(ALL_KNOWN_TEAMS)
         return self._team_matcher
 
     def validate_team(self, name: str) -> str | PredictionError:
@@ -84,6 +85,7 @@ class InputValidator:
         Validate a team name input.
 
         Supports English names, Chinese names, abbreviations, and fuzzy matching.
+        Recognizes both World Cup participants and non-participant teams.
 
         Args:
             name: The team name to validate.
@@ -121,9 +123,20 @@ class InputValidator:
         suggestions = result.suggestions[:3] if result.suggestions else []
         return PredictionError(
             error_code="INVALID_TEAM",
-            message=f"找不到球隊「{name.strip()}」，不在 48 支參賽隊伍中。",
+            message=f"找不到球隊「{name.strip()}」。請確認球隊名稱是否正確。",
             suggestions=suggestions
         )
+
+    def is_non_participant(self, team_name: str) -> bool:
+        """Check if a team is a non-World Cup participant.
+
+        Args:
+            team_name: Canonical team name.
+
+        Returns:
+            True if the team is not in the 48 World Cup participants.
+        """
+        return team_name not in ALL_TEAMS
 
     def validate_group(self, group_id: str) -> str | PredictionError:
         """

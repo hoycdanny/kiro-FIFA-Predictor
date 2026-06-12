@@ -56,11 +56,28 @@ async def handle_team_info(
             team_profile = team
             break
 
+    # If not found in participants, check non-participant teams
+    if team_profile is None:
+        np_teams = data_manager.load_non_participant_teams()
+        for team in np_teams:
+            if team.name == result:
+                team_profile = team
+                break
+
     if team_profile is None:
         return f"❌ 球隊「{result}」的資料不在資料庫中。"
 
     # Format output using the configured renderer
-    return formatter.format_team_profile(team_profile)
+    output = formatter.format_team_profile(team_profile)
+
+    # Add non-participant disclaimer
+    if team_profile.group == "N/A":
+        output += (
+            "\n\n> ⚠️ 此球隊非 2026 世界盃參賽隊伍，"
+            "資料為基於 FIFA 排名與近期表現的估算值。"
+        )
+
+    return output
 
 
 def _format_error(error: "PredictionError", original_query: str) -> str:

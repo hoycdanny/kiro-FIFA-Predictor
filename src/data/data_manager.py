@@ -160,37 +160,64 @@ class DataManager:
 
         teams: list[TeamProfile] = []
         for entry in entries:
-            team = TeamProfile(
-                name=entry["name"],
-                name_zh=entry["name_zh"],
-                aliases=entry.get("aliases", []),
-                confederation=entry["confederation"],
-                fifa_ranking=entry["fifa_ranking"],
-                fifa_points=entry["fifa_points"],
-                elo_rating=entry["elo_rating"],
-                group=entry["group"],
-                recent_goals_avg=entry["recent_goals_avg"],
-                recent_conceded_avg=entry["recent_conceded_avg"],
-                recent_win_rate=entry["recent_win_rate"],
-                recent_draw_rate=entry["recent_draw_rate"],
-                recent_loss_rate=entry["recent_loss_rate"],
-                neutral_win_rate=entry["neutral_win_rate"],
-                best_wc_result=entry["best_wc_result"],
-                vs_top20_win_rate=entry["vs_top20_win_rate"],
-                wc_first_match_win_rate=entry["wc_first_match_win_rate"],
-                penalty_shootout_win_rate=entry["penalty_shootout_win_rate"],
-                first_half_goal_pct=entry["first_half_goal_pct"],
-                second_half_goal_pct=entry["second_half_goal_pct"],
-                clean_sheet_rate=entry["clean_sheet_rate"],
-                failed_to_score_rate=entry["failed_to_score_rate"],
-                current_win_streak=entry.get("current_win_streak", 0),
-                current_loss_streak=entry.get("current_loss_streak", 0),
-                last_match_date=entry.get("last_match_date"),
-                eliminated_by_2022=entry.get("eliminated_by_2022"),
-            )
+            team = self._entry_to_team_profile(entry)
             teams.append(team)
 
         return teams
+
+    def load_non_participant_teams(self) -> list[TeamProfile]:
+        """Load non_participant_teams.json for friendly match predictions.
+
+        Returns an empty list if the file does not exist.
+        """
+        filepath = self.data_dir / "non_participant_teams.json"
+        if not filepath.exists():
+            return []
+
+        data = self._read_json(filepath)
+
+        if isinstance(data, list):
+            entries = data
+        else:
+            entries = data.get("teams", [])
+
+        teams: list[TeamProfile] = []
+        for entry in entries:
+            team = self._entry_to_team_profile(entry)
+            teams.append(team)
+
+        return teams
+
+    def _entry_to_team_profile(self, entry: dict) -> TeamProfile:
+        """Convert a JSON entry dict into a TeamProfile dataclass."""
+        return TeamProfile(
+            name=entry["name"],
+            name_zh=entry["name_zh"],
+            aliases=entry.get("aliases", []),
+            confederation=entry["confederation"],
+            fifa_ranking=entry["fifa_ranking"],
+            fifa_points=entry["fifa_points"],
+            elo_rating=entry["elo_rating"],
+            group=entry["group"],
+            recent_goals_avg=entry["recent_goals_avg"],
+            recent_conceded_avg=entry["recent_conceded_avg"],
+            recent_win_rate=entry["recent_win_rate"],
+            recent_draw_rate=entry["recent_draw_rate"],
+            recent_loss_rate=entry["recent_loss_rate"],
+            neutral_win_rate=entry["neutral_win_rate"],
+            best_wc_result=entry["best_wc_result"],
+            vs_top20_win_rate=entry["vs_top20_win_rate"],
+            wc_first_match_win_rate=entry["wc_first_match_win_rate"],
+            penalty_shootout_win_rate=entry["penalty_shootout_win_rate"],
+            first_half_goal_pct=entry["first_half_goal_pct"],
+            second_half_goal_pct=entry["second_half_goal_pct"],
+            clean_sheet_rate=entry["clean_sheet_rate"],
+            failed_to_score_rate=entry["failed_to_score_rate"],
+            current_win_streak=entry.get("current_win_streak", 0),
+            current_loss_streak=entry.get("current_loss_streak", 0),
+            last_match_date=entry.get("last_match_date"),
+            eliminated_by_2022=entry.get("eliminated_by_2022"),
+        )
 
     def load_groups(self) -> dict[str, list[str]]:
         """Load groups.json, return {group_id: [team_names]}."""

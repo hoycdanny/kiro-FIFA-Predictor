@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "fifa-predictor": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "${repoFolder}",
+        "run",
+        "--with", "mcp[cli]",
+        "--with", "numpy",
+        "--with", "rich",
+        "python",
+        "src/server.py"
+      ]
+    }
+  }
+}

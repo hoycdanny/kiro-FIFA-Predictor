@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "fifa-predictor": {
-      "command": "python",
+      "command": "C:\\Users\\Danny\\Desktop\\kiro-FIFA-Predictor\\.venv\\Scripts\\python.exe",
       "args": ["src/server.py"],
       "cwd": "${workspaceFolder}",
       "env": {}

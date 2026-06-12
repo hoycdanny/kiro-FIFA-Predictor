@@ -1,10 +1,28 @@
 {
   "current_weights": {
-    "poisson": 0.40,
+    "poisson": 0.4,
     "elo": 0.25,
     "h2h": 0.15,
-    "dynamic": 0.20
+    "dynamic": 0.2
   },
-  "weight_history": [],
+  "weight_history": [
+    {
+      "timestamp": "2026-06-12T13:32:07.984605Z",
+      "weights_before": {
+        "poisson": 0.4,
+        "elo": 0.25,
+        "h2h": 0.15,
+        "dynamic": 0.2
+      },
+      "weights_after": {
+        "poisson": 0.4,
+        "elo": 0.25,
+        "h2h": 0.15,
+        "dynamic": 0.2
+      },
+      "trigger": "auto_recalibration",
+      "matches_evaluated": 0
+    }
+  ],
   "accuracy_records": []
 }

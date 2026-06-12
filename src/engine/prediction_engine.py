@@ -110,6 +110,8 @@ class PredictionEngine:
     def _get_team(self, team_name: str) -> TeamProfile:
         """Get team profile by name, using cache.
 
+        Searches both World Cup participants and non-participant teams.
+
         Args:
             team_name: Canonical English team name.
 
@@ -122,6 +124,15 @@ class PredictionEngine:
         if not self._teams_cache:
             teams = self.data_manager.load_teams()
             self._teams_cache = {t.name: t for t in teams}
+
+            # Also load non-participant teams
+            try:
+                np_teams = self.data_manager.load_non_participant_teams()
+                for t in np_teams:
+                    if t.name not in self._teams_cache:
+                        self._teams_cache[t.name] = t
+            except (FileNotFoundError, Exception):
+                pass  # Non-participant data is optional
 
         if team_name not in self._teams_cache:
             raise ValueError(f"Team '{team_name}' not found in database.")

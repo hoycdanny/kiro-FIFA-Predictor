@@ -229,7 +229,43 @@ CONFIDENCE_MID_MAX: int = 66
 CONFIDENCE_HIGH_MAX: int = 100
 
 # ============================================================================
-# ALL TEAM NAMES (convenience list)
+# NON-PARTICIPANT TEAM ALIASES
+# Maps canonical English name -> list of aliases for teams NOT in the World Cup
+# Used for friendly match predictions
+# ============================================================================
+
+NON_PARTICIPANT_ALIASES: dict[str, list[str]] = {
+    "Bosnia and Herzegovina": ["波士尼亞與赫塞哥維納", "BIH", "波赫", "Bosnia", "波黑"],
+    "Turkey": ["土耳其", "TUR", "Türkiye"],
+    "Greece": ["希臘", "GRE", "Hellas"],
+    "Sweden": ["瑞典", "SWE", "Sverige"],
+    "Norway": ["挪威", "NOR", "Norge"],
+    "Wales": ["威爾斯", "WAL", "Cymru"],
+    "Czech Republic": ["捷克", "CZE", "Czechia"],
+    "Ukraine": ["烏克蘭", "UKR"],
+    "Russia": ["俄羅斯", "RUS"],
+    "Romania": ["羅馬尼亞", "ROU", "România"],
+    "Hungary": ["匈牙利", "HUN", "Magyarország"],
+    "Chile": ["智利", "CHI"],
+    "Venezuela": ["委內瑞拉", "VEN"],
+    "Bolivia": ["玻利維亞", "BOL"],
+    "China": ["中國", "CHN", "中国"],
+    "Thailand": ["泰國", "THA"],
+    "Ghana": ["迦納", "GHA"],
+    "Ivory Coast": ["象牙海岸", "CIV", "Côte d'Ivoire"],
+    "Panama": ["巴拿馬", "PAN", "Panamá"],
+}
+
+# ============================================================================
+# ALL TEAM NAMES (convenience list — World Cup participants only)
 # ============================================================================
 
 ALL_TEAMS: list[str] = sorted(CONFEDERATION_MAP.keys())
+
+# ============================================================================
+# ALL KNOWN TEAMS (participants + non-participants for matching)
+# ============================================================================
+
+ALL_KNOWN_TEAMS: list[str] = sorted(
+    list(CONFEDERATION_MAP.keys()) + list(NON_PARTICIPANT_ALIASES.keys())
+)

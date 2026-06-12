@@ -9,7 +9,7 @@ from dataclasses import dataclass, field
 from difflib import SequenceMatcher
 from typing import Optional
 
-from src.utils.constants import TEAM_ALIASES
+from src.utils.constants import TEAM_ALIASES, NON_PARTICIPANT_ALIASES
 
 
 @dataclass
@@ -48,14 +48,20 @@ class TeamMatcher:
         The index includes:
         - Canonical English name (lowercased)
         - All aliases from TEAM_ALIASES (Chinese names, abbreviations, alternate spellings)
+        - All aliases from NON_PARTICIPANT_ALIASES (for friendly match support)
         """
         for canonical in team_names:
             # Index the canonical name itself
             self._index[canonical.lower()] = canonical
 
-            # Index all aliases for this team
+            # Index all aliases for this team (participant teams)
             aliases = TEAM_ALIASES.get(canonical, [])
             for alias in aliases:
+                self._index[alias.lower()] = canonical
+
+            # Index all aliases for non-participant teams
+            np_aliases = NON_PARTICIPANT_ALIASES.get(canonical, [])
+            for alias in np_aliases:
                 self._index[alias.lower()] = canonical
 
     def match(self, query: str) -> MatchResult:
